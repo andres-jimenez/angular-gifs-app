@@ -1,0 +1,17 @@
+<div class="sidebar bg-dark border-right p-3" id="sidebar">
+  <h2 class="text-light">Gifs App</h2>
+  <hr class="text-white" />
+  <h5 class="text-white mb-3">Búsquedas recientes</h5>
+  <p class="text-light small" *ngIf="tagsHistory.length < 1">
+    <small>Aún no has realizado ninguna búsqueda...</small>
+  </p>
+  <div class="list-group list-reset">
+    <button
+      *ngFor="let tag of tagsHistory"
+      class="list-group-item list-group-item-action"
+      (click)="searchTag(tag)"
+    >
+      {{ tag }}
+    </button>
+  </div>
+</div>
